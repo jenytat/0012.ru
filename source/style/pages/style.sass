@@ -1,0 +1,179 @@
+body
+    font-family: sans-serif
+.container
+    max-width: 1140px
+    width: 100%
+    margin: 0 auto
+.form-question
+    background: rgba(53, 97, 112, 0.9)
+    padding: 59px 0
+    & > .container
+        display: flex
+        justify-content: space-between
+.form__wrap
+    width: 75.6%
+    box-sizing: border-box
+    padding-right: 75px
+    border-right: 1px solid $color-white
+    & h2
+        margin: 0
+        font-size: 60px
+        line-height: 75px
+        color: $color-white
+        padding-bottom: 10px
+    & p
+        margin: 0
+        padding-bottom: 25px
+        font-size: 20px
+        line-height: 24px
+        color: $color-white
+    & form
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        & input[type="text"]
+            color: $color-white
+            width: 33%
+            background: none
+            padding: 10px 15px
+            height: 55px
+            box-sizing: border-box
+            border: 2px solid #FFFFFF
+            outline: none
+            margin-bottom: 20px
+            &::placeholder
+                font-size: 16px
+                line-height: 19px
+                color: $color-white
+        & textarea
+            background: none
+            outline: none
+            color: $color-white
+            width: 100%
+            box-sizing: border-box
+            border: 2px solid #FFFFFF
+            height: 80px
+            padding: 18px 15px
+            &::placeholder
+                font-size: 16px
+                line-height: 19px
+                color: $color-white
+.form__btn
+    width: 100%
+    margin-top: 20px
+    display: flex
+    justify-content: space-between
+    & input[type="submit"]
+        display: flex
+        align-items: center
+        justify-content: center
+        max-width: 386px
+        width: 100%
+        box-sizing: border-box
+        height: 55px
+        outline: none
+        border: none
+        background: #FFFFFF
+        font-size: 20px
+        line-height: 25px
+        font-weight: bold
+        color: #000000
+        cursor: pointer
+.form__row
+    & input[type="file"]
+        display: none
+    & input[type="checkbox"]
+        display: none
+        &:checked + label::after
+            content: ''
+            position: absolute
+            top: 4px
+            left: 3px
+            width: 10px
+            height: 7px
+            background: url(../images/icon/check.svg) no-repeat
+            background-size: contain
+    & label[for="check"]
+        margin-top: 12px
+        font-size: 14px
+        line-height: 17px
+        color: #FFFFFF
+        padding-left: 25px
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            width: 15px
+            height: 15px
+            background: #FFFFFF
+            display: block
+            left: 0
+            top: 0
+    & label
+        display: flex
+        align-items: center
+        & .filetext
+            font-size: 16px
+            line-height: 19px
+            color: #FFFFFF
+        & .fakebutton
+            margin-right: 5px
+.form__contct
+    width: 24.4%
+    box-sizing: border-box
+    padding-left: 67px
+    & h4
+        margin: 0
+        padding-bottom: 34px
+        font-size: 20px
+        line-height: 25px
+        color: $color-white
+    & a
+        text-decoration: none
+        display: flex
+        align-items: center
+        margin-bottom: 30px
+        font-size: 18px
+        line-height: 22px
+        color: $color-white
+        & img
+            margin-right: 7px
+    & p
+        margin: 0
+        display: flex
+        align-items: center
+        font-size: 18px
+        line-height: 22px
+        color: $color-white
+        & img
+            margin-right: 7px
+@media(max-width: 991px)
+    .container
+        max-width: 720px
+    .form-question > .container
+        flex-direction: column
+    .form__wrap, .form__contct
+        padding: 0
+        width: 100%
+        border-right: none
+    .form__contct
+        margin-top: 30px
+@media(max-width: 576px)
+    .container
+        max-width: 540px
+        box-sizing: border-box
+        padding: 0 15px
+    .form-question
+        padding: 35px 0
+    .form__wrap h2
+        font-size: 30px
+        line-height: 45px
+    .form__wrap p
+        font-size: 17px
+        line-height: 18px
+    .form__wrap form input[type="text"]
+        width: 100%
+    .form__btn
+        flex-direction: column
+    .form__btn input[type="submit"]
+        margin: 10px auto 0 auto
